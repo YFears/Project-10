@@ -1,3 +1,3 @@
-#[Рабочая версия][1]
-[1]:(https://project-10.github.io/form/ "Мой сайт")
-Версия v1.0.0
+#[Яндекс.Практикум - Regular Expressions][1]
+Версия v0.9.9
+[1]:https://yfears.github.io/Project-10/ "Сайт по проектной работе (RegExp)"
