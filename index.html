@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <title>Regular Expressions</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <header class="header">
         <img class="header__logo" src="https://pictures.s3.yandex.net/frontend-developer/dom_bom/logo.svg" alt="logo">
@@ -20,24 +22,31 @@
                 <h3>Форма регистрации</h3>
                 <fieldset class="form__fieldset">
                     <div class="form__field">
-                        <input class="form__input" type="text" name="name" minlength="2" maxlength="20" pattern="^[А-ЯЁ]{1}[а-яё]{1,}(?:-[А-ЯЁ]{1}[а-яё]{1,})?$" placeholder="Имя" required />
+                        <input class="form__input" type="text" name="name" minlength="2" maxlength="20"
+                            pattern="^[А-ЯЁ][а-яё]+(-[А-ЯЁ][а-яё]+)?$" placeholder="Имя" required />
                     </div>
                     <div class="form__field">
-                        <input class="form__input" type="email" name="email" pattern="^[\w\-]+\@[a-z]+\.[a-z]+$" placeholder="E-Mail" required />
+                        <input class="form__input" type="email" name="email"
+                            pattern="^[\w\-]{2,}(\.[\w\-]{2,})*\@[a-z]{2,}(\.[a-z]{2,})+$" placeholder="E-Mail"
+                            required />
                         <span class="form__error">e-mail в формате: students-yandex@yandex.ru</span>
                     </div>
                     <div class="form__field">
-                        <input class="form__input" type="tel" name="tel" placeholder="Телефон"  maxlength="18" pattern="^\+?\d{1}\s?\(?\d{3}\)?\s?\d{3}-?\d{2}-?\d{2}$" required/>
-                        <span class="form__error">телефон в формате: +7 (900) 000-00-00</span>
+                        <input class="form__input" type="text" name="tel" placeholder="Телефон" maxlength="18"
+                            pattern="^(\+7|8)(\d{10}|(\(\d{3}\)\s?|\s\d{3}\-)\d{3}\-\d{2}\-\d{2})$" required />
+                        <span class="form__error">телефон в формате: +7(900) 000-00-00</span>
                     </div>
                     <div class="form__field">
-                        <input class="form__input" type="url" name="url" pattern="^(?:https?\:\/\/)?(?:w{3}\.)?(?:(?:(?:25[0-5]|2[0-4][0-9]|1?\d{1,2})\.(?:25[0-5]|2[0-4][0-9]|1?\d{1,2})\.(?:25[0-5]|2[0-4][0-9]|1?\d{1,2})\.(?:25[0-5]|2[0-4][0-9]|1?\d{1,2}))|(?:\w+\.[a-z]+))(?:\:\d{2,5})?(?:\/[a-zA-Z0-9]+){0,}\#?$" placeholder="Ваш сайт" required/>
+                        <input class="form__input" type="url" name="url"
+                            pattern="^(https?\:\/\/)?(w{3}\.)?(((25[0-5]|2[0-4][0-9]|1?\d{1,2})\.(25[0-5]|2[0-4][0-9]|1?\d{1,2})\.(25[0-5]|2[0-4][0-9]|1?\d{1,2})\.(25[0-5]|2[0-4][0-9]|1?\d{1,2}))|(\w{2,}\.[a-z]{2,}))(\:\d{2,5})?(\/[a-zA-Z0-9]+){0,}\#?$"
+                            placeholder="Ваш сайт" required />
                         <span class="form__error">URL в формате: http://mysite.ru</span>
                     </div>
                     <button class="form__button" type="submit">Отправить</button>
                 </fieldset>
             </form>
         </div>
-    </main>     
+    </main>
 </body>
+
 </html>
