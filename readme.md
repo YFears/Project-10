@@ -1,2 +1,2 @@
 # [Яндекс.Практикум - Regular Expressions](https://yfears.github.io/Project-10/ "Сайт по проектной работе (RegExp)")
-Версия v0.9.9
+Версия v1.0.0
